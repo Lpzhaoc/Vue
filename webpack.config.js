@@ -28,6 +28,10 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             },
             {
+                test: /\.(scss|sass)$/, // 匹配需要加载器处理的文件后缀名
+                use: ['style-loader', 'css-loader', 'sass-loader'] 
+            },
+            {
                 test: /\.(jpg|jpeg|png|webp|gif)$/,
                 use: 'url-loader?limit=234&name=[hash:8]-[name].[ext]'
             },
